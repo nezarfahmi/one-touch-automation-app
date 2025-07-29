@@ -1,15 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>One-Touch Automation App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f5f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #002b45;
+            color: white;
+            width: 100%;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header img {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        .container {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .button {
+            display: block;
+            width: 260px;
+            margin: 20px auto;
+            padding: 18px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background-color: #f4b400;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.25s;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #dca300;
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the One-Touch Automation App</h1>
-    <p>Select a section below:</p>
-    <ul>
-        <li><a href="https://your-sops-app-url.com" target="_blank">Standard Operating Procedures & Assistant</a></li>
-        <li><a href="https://your-client-care-url.com" target="_blank">Client Care Forms</a></li>
-        <li><a href="https://your-warehouse-url.com" target="_blank">Warehouse - Product Receiving</a></li>
-    </ul>
+
+    <header>
+        <img src="{{ url_for('static', filename='otalogo.jpg') }}" alt="OTA Logo">
+        <h1>One-Touch Automation App</h1>
+    </header>
+
+    <div class="container">
+        <a class="button" href="https://one-touch-sops.onrender.com" target="_blank">Standard Operating Procedures (SOP) Assistant</a>
+        <a class="button" href="https://one-touch-client-care.onrender.com" target="_blank"> Client Care Forms</a>
+        <a class="button" href="https://one-touch-warehouse.onrender.com" target="_blank">📦 Warehouse Packing Receiver</a>
+    </div>
+
+    <footer>© One-Touch Automation</footer>
 </body>
 </html>
